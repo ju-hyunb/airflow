@@ -4,7 +4,7 @@ from airflow.operators.bash_operator import BashOperator
 from airflow.operators.python_operator import PythonOperator
 import os
 
-# Define your DAG settings
+
 dag = DAG(
     'news_google_dag',
     schedule_interval='* */1 * * *', #hourly 
