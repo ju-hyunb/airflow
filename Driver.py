@@ -49,7 +49,7 @@ def dump(tbname, df, engine):
 
     for i in range(len(df)):
         try:
-            df.iloc[i:i+1].to_sql(name=tbname, con=engine, if_exists='append', method='multi', index=False, index_label = ['url2', 'title'])
+            df.iloc[i:i+1].to_sql(name=tbname, con=engine, if_exists='append', method='multi', index=False, index_label = ['url', 'title'])
         except IntegrityError:
             print('Duplicated')
         except ValueError:
